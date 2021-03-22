@@ -1,4 +1,4 @@
-class ClientCard{
+class ClientCard {
     constructor(number, holder, expiration, cvv, password, encryptedPassword, salt, limit){
         this.number = number,
         this.holder = holder ,

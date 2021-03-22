@@ -1,6 +1,8 @@
 const { generateStatement } = require('../../src/api/services/statement.service')
 var chai = require('chai')
 const {assert, expect} = require('chai')
+const chaiAsPromised = require("chai-as-promised")
+chai.use(chaiAsPromised);
 
 describe('Teste do gerador de extrato',() => {
     
@@ -8,12 +10,14 @@ describe('Teste do gerador de extrato',() => {
         async () => {
 
         const params = {
-            acc: 1, 
-            initDate: '2021-03-17 00:00:00', 
-            endDate: '2021-03-17 23:59:00'
+            acc: 7, 
+            initDate: 1614628133, 
+            endDate: 1617306533
         }
 
-        await assert.typeOf(generateStatement(params), 'object')
-
+        // await assert.typeOf(generateStatement(params), 'object')
+        const result = await generateStatement(params)
+        assert.typeOf(result, 'array')
     })
+
 })
