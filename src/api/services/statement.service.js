@@ -14,6 +14,7 @@ const generateStatement = async ({acc, initDate, endDate}) => {
     try{
         //Iteração das entradas
         const entryList = await getEntries({acc,initDate,endDate})
+        if (!entryList.length) throw new Error("Não existem transações nesse intervalo de tempo")
         const statementEntries = entryList.map(entryRegister => {
             const {
                 checkingAccountEntryDate, 
@@ -62,7 +63,7 @@ const generateStatement = async ({acc, initDate, endDate}) => {
         return result
 
     }catch(err){
-        console.log(err)
+        throw err
     }
 
 }

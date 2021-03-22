@@ -2,12 +2,12 @@ POST http://localhost:3001/user/paycredit HTTP/1.1
 Content-Type: application/json
 
 {   
-     "cardNumber":"4716654496056582",
-     "value": 150,
+     "cardNumber":"4556269894895474",
+     "value": 1,
      "installments": 6,
      "description": "Joguinho",
-     "expiration": "11/23",
-     "holder": "MATHEUS C CARVALHO",
-     "password": "002864",
-     "cvv": "213"
+     "expiration": "05/23",
+     "holder": "HELENA R FELIZMENTE",
+     "password": "865600",
+     "cvv": "498"
 }
