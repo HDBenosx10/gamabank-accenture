@@ -9,7 +9,7 @@ const signupHtml = (userInfo) => {
             <td><h2 style= "align-text: center; font-family: 'Helvetica', sans-serif; font-size: 14px;"> ${userInfo.clientName.split(' ')[0]}, é um prazer ter você conosco!</h2></td>
         </tr>
         <tr>
-            <td><p style= "align-text: center; font-family: 'Helvetica', sans-serif; font-size: 14px;">O número de sua conta: ${userInfo.clientCod} </p></td>
+            <td><p style= "align-text: center; font-family: 'Helvetica', sans-serif; font-size: 14px;">O número de sua conta: ${userInfo.checkingAccountNumber} </p></td>
         </tr>
         <tr>
             <td><p style= "align-text: center; font-family: 'Helvetica', sans-serif; font-size: 14px;">Número do cartão e cvv: ${userInfo.number} / ${userInfo.cvv} </p></td>

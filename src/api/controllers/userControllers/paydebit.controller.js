@@ -21,7 +21,7 @@ const paydebitHandler = async (request, h) => {
                 value,
                 description
             }
-            console.log(emailData)
+            
             
             return await newDebitExpenses(transferData) 
 
